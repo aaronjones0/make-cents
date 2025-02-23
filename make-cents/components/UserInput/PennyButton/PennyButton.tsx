@@ -7,13 +7,15 @@ export function PennyButton({
     <button
       {...props}
       className={[
-        'h-10 w-full',
-        'p-2',
+        'h-10 w-fit min-w-20',
+        'py-2 px-3',
+        'whitespace-nowrap',
         'flex flex-row gap-1 items-center justify-center',
-        'bg-stone-400 dark:bg-stone-900 text-stone-100 dark:text-stone-400',
-        'hover:bg-stone-500 dark:hover:bg-stone-800',
-        'hover:text-stone-200 dark:hover:text-stone-400',
-        'shadow-sm',
+        'bg-neutral-400 dark:bg-neutral-900 text-neutral-100 dark:text-neutral-400',
+        'disabled:bg-neutral-300 disabled:dark:bg-neutral-800 disabled:text-neutral-200 disabled:dark:text-neutral-300',
+        'enabled:hover:bg-neutral-500 enabled:dark:hover:bg-neutral-800',
+        'enabled:hover:text-neutral-200 enabled:dark:hover:text-neutral-300',
+        'shadow-sm shadow-neutral-800 disabled:shadow-none',
         'rounded-md',
         'transition-colors',
       ].join(' ')}
