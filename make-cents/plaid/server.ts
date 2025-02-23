@@ -6,7 +6,13 @@ export function createPlaidClient(
   environment: string
 ): {
   plaidClient: PlaidApi;
-  sessionOptions: any;
+  sessionOptions: {
+    cookieName: string;
+    password: string;
+    cookieOptions: {
+      secure: boolean;
+    };
+  };
 } {
   const plaidClient = new PlaidApi(
     new Configuration({
