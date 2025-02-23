@@ -43,7 +43,11 @@ export function PlaidTest() {
     token: linkToken,
   };
 
-  const { open, exit, ready } = usePlaidLink(config);
+  const {
+    open,
+    //exit,
+    ready,
+  } = usePlaidLink(config);
 
   return (
     <div>
@@ -51,9 +55,9 @@ export function PlaidTest() {
         <PennyButton onClick={() => open()} disabled={!ready}>
           Connect your bank account
         </PennyButton>
-        <PennyButton onClick={() => exit()} disabled={!ready}>
+        {/* <PennyButton onClick={() => exit()} disabled={!ready}>
           Exit
-        </PennyButton>
+        </PennyButton> */}
       </div>
     </div>
   );
