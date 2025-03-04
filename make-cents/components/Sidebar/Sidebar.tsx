@@ -1,6 +1,6 @@
 'use client';
 
-import { HomeIcon, UserIcon } from '@heroicons/react/24/outline';
+import { ChartPieIcon, HomeIcon, UserIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -17,12 +17,19 @@ export function Sidebar() {
         'border-r border-neutral-300 dark:border-neutral-950',
       ].join(' ')}
     >
-      <h1 className='select-none text-2xl font-light text-neutral-300'>Make Cents</h1>
+      <h1 className='select-none text-2xl font-light text-neutral-300'>
+        Make Cents
+      </h1>
       <nav className='py-1'>
         <ul>
           <li>
             <NavLink label='Home' href='/' pathname={pathname}>
               <HomeIcon className='size-6' />
+            </NavLink>
+          </li>
+          <li>
+            <NavLink label='Budgets' href='/budgets' pathname={pathname}>
+              <ChartPieIcon className='size-6' />
             </NavLink>
           </li>
           <li>
